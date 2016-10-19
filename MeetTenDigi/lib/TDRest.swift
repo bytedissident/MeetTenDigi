@@ -18,8 +18,10 @@ class TDRest: NSObject {
             
             Alamofire.request(url).responseJSON { response in
                 if let JSON = response.result.value {
+                    print("success")
                     complete(JSON as! [String : AnyObject])
                 }else{
+                    print("fail")
                     fail()
                 }
             }

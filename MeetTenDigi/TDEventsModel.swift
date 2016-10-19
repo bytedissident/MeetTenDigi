@@ -28,9 +28,19 @@ class TDEventsModel: NSObject {
     override init(){
         super.init()
         tdConfig.conf()
-        let options = NSKeyValueObservingOptions([.new, .old])
-        tdLoc.addObserver(self, forKeyPath: "locationUpdated", options:options, context: nil)
-        tdLoc.addObserver(self, forKeyPath: "locationUpdateFailed", options:options, context: nil)
+        
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+            let options = NSKeyValueObservingOptions([.new, .old])
+            tdLoc.addObserver(self, forKeyPath: "locationUpdated", options:options, context: nil)
+            tdLoc.addObserver(self, forKeyPath: "locationUpdateFailed", options:options, context: nil)
+        }
+    }
+    
+    deinit {
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+            tdLoc.removeObserver(self, forKeyPath: "locationUpdated")
+            tdLoc.removeObserver(self, forKeyPath: "locationUpdateFailed")
+        }
     }
     
     func listEvents(){

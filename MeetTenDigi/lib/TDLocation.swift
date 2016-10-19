@@ -18,7 +18,7 @@ class TDLocation: NSObject,CLLocationManagerDelegate {
     dynamic var locationUpdateFailed = 0.0
     
     func startGPS(){
-       
+       print("START")
         self.locationManager.delegate = self
         if CLLocationManager.locationServicesEnabled() {
             
@@ -80,6 +80,7 @@ class TDLocation: NSObject,CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
     {
+        print("error")
         self.locationUpdateFailed = NSDate.timeIntervalSinceReferenceDate
     }
 }

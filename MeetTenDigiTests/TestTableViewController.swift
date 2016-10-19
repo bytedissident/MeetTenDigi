@@ -17,7 +17,7 @@ class TestTableViewController: XCTestCase {
         self.sut = TableViewController()
         let storyboard:UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         self.sut = storyboard.instantiateViewController(withIdentifier: "Home") as! TableViewController
-        self.sut.loadView()
+        //self.sut.loadView()
         self.sut.viewDidLoad()
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -46,6 +46,19 @@ class TestTableViewController: XCTestCase {
     }
     
     func testHandleFailure(){
+        sut.handleFail()
         XCTAssertEqual(self.sut.currentState,eventState.failure)
+        
+    }
+    
+    func testRefreshEvents(){
+        
+        let e = Event()
+        sut.model.events.append(e)
+        XCTAssertEqual(sut.model.events.count, 1)
+        sut.refreshEvents()
+        XCTAssertEqual(self.sut.currentState,eventState.refreshing)
+        XCTAssertEqual(sut.model.events.count, 0)
+        
     }
 }

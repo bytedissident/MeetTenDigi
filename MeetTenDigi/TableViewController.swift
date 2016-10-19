@@ -38,13 +38,18 @@ class TableViewController: UITableViewController {
 
         self.title = "Meet Ups"
         
+        //SET DEFAULT STATE
         self.currentState = eventState.loading
         
-        let options = NSKeyValueObservingOptions([.new, .old])
-        model.addObserver(self, forKeyPath: "eventChange", options:options, context: nil)
-        model.addObserver(self, forKeyPath: "eventFail", options:options, context: nil)
+        //workaround for XCTEST Bug
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+            let options = NSKeyValueObservingOptions([.new, .old])
+            model.addObserver(self, forKeyPath: "eventChange", options:options, context: nil)
+            model.addObserver(self, forKeyPath: "eventFail", options:options, context: nil)
+        }
         model.listEvents()
         
+        //ADD SPINNER TO TABLEVIEW ON INITIAL LOAD
         self.tableView.backgroundView = self.ac()
         
         //REFRESH
@@ -53,8 +58,11 @@ class TableViewController: UITableViewController {
     }
     
     deinit {
-        model.removeObserver(self, forKeyPath: "eventChange")
-        model.removeObserver(self, forKeyPath: "eventFail")
+        
+        if ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] == nil {
+            model.removeObserver(self, forKeyPath: "eventChange")
+            model.removeObserver(self, forKeyPath: "eventFail")
+        }
     }
     
     
@@ -93,11 +101,10 @@ class TableViewController: UITableViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
-        
-        self.refresh.endRefreshing()
         self.tableView.backgroundView = nil
         
         if keyPath == "eventChange"{
+            self.refresh.endRefreshing()
             self.tableView.reloadData()
             self.currentState = eventState.success
         }else if keyPath == "eventFail" {
@@ -109,24 +116,27 @@ class TableViewController: UITableViewController {
         
         //prevent double presntation of view
         if self.currentState == eventState.failure { return }
-        
         self.currentState = eventState.failure
+        
         let alert = UIAlertController(title: "Error", message: "Sorry there was an error getting the events list. Please make sure you have access to the internet and location services on for this app. Thanks!", preferredStyle: UIAlertControllerStyle.alert)
         
         
         let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {[weak self] (ac) in
             if let strongSelf = self {
+                strongSelf.refresh.endRefreshing()
                 strongSelf.currentState = eventState.intial
             }
         }
+       
         alert.addAction(cancel)
         // show the alert
-        self.present(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion:nil)
     }
     
     //HANDLE REFRESH
     func refreshEvents(){
         
+        self.currentState = eventState.refreshing
         self.model.events.removeAll()
         self.tableView.reloadData()
         self.refresh.beginRefreshing()
