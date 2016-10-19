@@ -8,10 +8,20 @@
 
 import UIKit
 
+enum eventState {
+    
+    case intial
+    case loading
+    case refreshing
+    case success
+    case failure
+}
+
 class TableViewController: UITableViewController {
 
     let refresh = UIRefreshControl()
     var model = TDEventsModel()
+    var currentState = eventState.intial
     
     lazy var ac = { () -> UIActivityIndicatorView in
         
@@ -28,8 +38,11 @@ class TableViewController: UITableViewController {
 
         self.title = "Meet Ups"
         
+        self.currentState = eventState.loading
+        
         let options = NSKeyValueObservingOptions([.new, .old])
         model.addObserver(self, forKeyPath: "eventChange", options:options, context: nil)
+        model.addObserver(self, forKeyPath: "eventFail", options:options, context: nil)
         model.listEvents()
         
         self.tableView.backgroundView = self.ac()
@@ -37,6 +50,11 @@ class TableViewController: UITableViewController {
         //REFRESH
         refresh.addTarget(self, action: #selector(TableViewController.refreshEvents), for: .valueChanged)
         self.tableView.addSubview(self.refresh)
+    }
+    
+    deinit {
+        model.removeObserver(self, forKeyPath: "eventChange")
+        model.removeObserver(self, forKeyPath: "eventFail")
     }
     
     
@@ -75,9 +93,35 @@ class TableViewController: UITableViewController {
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         
+        
         self.refresh.endRefreshing()
         self.tableView.backgroundView = nil
-        self.tableView.reloadData()
+        
+        if keyPath == "eventChange"{
+            self.tableView.reloadData()
+            self.currentState = eventState.success
+        }else if keyPath == "eventFail" {
+            self.handleFail()
+        }
+    }
+    
+    func handleFail(){
+        
+        //prevent double presntation of view
+        if self.currentState == eventState.failure { return }
+        
+        self.currentState = eventState.failure
+        let alert = UIAlertController(title: "Error", message: "Sorry there was an error getting the events list. Please make sure you have access to the internet and location services on for this app. Thanks!", preferredStyle: UIAlertControllerStyle.alert)
+        
+        
+        let cancel = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {[weak self] (ac) in
+            if let strongSelf = self {
+                strongSelf.currentState = eventState.intial
+            }
+        }
+        alert.addAction(cancel)
+        // show the alert
+        self.present(alert, animated: true, completion: nil)
     }
     
     //HANDLE REFRESH

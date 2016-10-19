@@ -38,7 +38,5 @@
 	<string>TD requires location in order to access it&apos;s full feature set.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>TD requires location in order to access it&apos;s full feature set.</string>
-	<key>meetup_api_key</key>
-	<string>704a57575b10517ac744f3557724418</string>
 </dict>
 </plist>

@@ -13,6 +13,9 @@
 		654374491DB67B2300FDC047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654374471DB67B2300FDC047 /* LaunchScreen.storyboard */; };
 		654374541DB67B2400FDC047 /* MeetTenDigiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654374531DB67B2400FDC047 /* MeetTenDigiTests.swift */; };
 		654374631DB686F300FDC047 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 654374621DB686F300FDC047 /* Podfile */; };
+		658DA4C51DB7AC65000FED22 /* TDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA4C41DB7AC65000FED22 /* TDConfig.swift */; };
+		658DA4C71DB7ADA2000FED22 /* TestTDConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658DA4C61DB7ADA2000FED22 /* TestTDConfig.swift */; };
+		658DA4C91DB7C526000FED22 /* td_config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 658DA4C81DB7C526000FED22 /* td_config.plist */; };
 		65E564F31DB6887200FB5B6A /* TDRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564F21DB6887200FB5B6A /* TDRest.swift */; };
 		65E564F51DB6895600FB5B6A /* TDEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564F41DB6895600FB5B6A /* TDEventsModel.swift */; };
 		65E564F71DB68DD200FB5B6A /* TestTDEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564F61DB68DD200FB5B6A /* TestTDEventsModel.swift */; };
@@ -49,6 +52,9 @@
 		654374531DB67B2400FDC047 /* MeetTenDigiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetTenDigiTests.swift; sourceTree = "<group>"; };
 		654374551DB67B2400FDC047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654374621DB686F300FDC047 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		658DA4C41DB7AC65000FED22 /* TDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDConfig.swift; sourceTree = "<group>"; };
+		658DA4C61DB7ADA2000FED22 /* TestTDConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTDConfig.swift; sourceTree = "<group>"; };
+		658DA4C81DB7C526000FED22 /* td_config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = td_config.plist; sourceTree = "<group>"; };
 		65E564F21DB6887200FB5B6A /* TDRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDRest.swift; sourceTree = "<group>"; };
 		65E564F41DB6895600FB5B6A /* TDEventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDEventsModel.swift; sourceTree = "<group>"; };
 		65E564F61DB68DD200FB5B6A /* TestTDEventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTDEventsModel.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				65E564F61DB68DD200FB5B6A /* TestTDEventsModel.swift */,
 				65E564FA1DB693F500FB5B6A /* TestTDRest.swift */,
 				65E565081DB710E900FB5B6A /* TestTableViewController.swift */,
+				658DA4C61DB7ADA2000FED22 /* TestTDConfig.swift */,
 			);
 			path = MeetTenDigiTests;
 			sourceTree = "<group>";
@@ -149,6 +156,8 @@
 			children = (
 				65E564F21DB6887200FB5B6A /* TDRest.swift */,
 				65E565041DB6AAD700FB5B6A /* TDLocation.swift */,
+				658DA4C41DB7AC65000FED22 /* TDConfig.swift */,
+				658DA4C81DB7C526000FED22 /* td_config.plist */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -252,6 +261,7 @@
 			files = (
 				654374491DB67B2300FDC047 /* LaunchScreen.storyboard in Resources */,
 				654374461DB67B2300FDC047 /* Assets.xcassets in Resources */,
+				658DA4C91DB7C526000FED22 /* td_config.plist in Resources */,
 				65E564F91DB693BE00FB5B6A /* events.json in Resources */,
 				654374631DB686F300FDC047 /* Podfile in Resources */,
 				65E565031DB6A00D00FB5B6A /* EventCell.xib in Resources */,
@@ -326,6 +336,7 @@
 				6543743F1DB67B2300FDC047 /* AppDelegate.swift in Sources */,
 				65E564FD1DB6981800FB5B6A /* TableViewController.swift in Sources */,
 				65E565011DB69FD500FB5B6A /* EventCell.swift in Sources */,
+				658DA4C51DB7AC65000FED22 /* TDConfig.swift in Sources */,
 				65E564F31DB6887200FB5B6A /* TDRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658DA4C71DB7ADA2000FED22 /* TestTDConfig.swift in Sources */,
 				65E564F71DB68DD200FB5B6A /* TestTDEventsModel.swift in Sources */,
 				654374541DB67B2400FDC047 /* MeetTenDigiTests.swift in Sources */,
 				65E564FB1DB693F500FB5B6A /* TestTDRest.swift in Sources */,

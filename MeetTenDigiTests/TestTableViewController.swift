@@ -45,4 +45,7 @@ class TestTableViewController: XCTestCase {
         }
     }
     
+    func testHandleFailure(){
+        XCTAssertEqual(self.sut.currentState,eventState.failure)
+    }
 }

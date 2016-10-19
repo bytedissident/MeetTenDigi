@@ -24,7 +24,7 @@ class TDRest: NSObject {
                 }
             }
         }else{
-            
+            fail()
         }
     }
 }
