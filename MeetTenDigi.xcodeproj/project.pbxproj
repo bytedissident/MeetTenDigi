@@ -8,11 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		6543743F1DB67B2300FDC047 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6543743E1DB67B2300FDC047 /* AppDelegate.swift */; };
-		654374411DB67B2300FDC047 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654374401DB67B2300FDC047 /* ViewController.swift */; };
 		654374441DB67B2300FDC047 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654374421DB67B2300FDC047 /* Main.storyboard */; };
 		654374461DB67B2300FDC047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 654374451DB67B2300FDC047 /* Assets.xcassets */; };
 		654374491DB67B2300FDC047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 654374471DB67B2300FDC047 /* LaunchScreen.storyboard */; };
 		654374541DB67B2400FDC047 /* MeetTenDigiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654374531DB67B2400FDC047 /* MeetTenDigiTests.swift */; };
+		654374631DB686F300FDC047 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 654374621DB686F300FDC047 /* Podfile */; };
+		65E564F31DB6887200FB5B6A /* TDRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564F21DB6887200FB5B6A /* TDRest.swift */; };
+		65E564F51DB6895600FB5B6A /* TDEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564F41DB6895600FB5B6A /* TDEventsModel.swift */; };
+		65E564F71DB68DD200FB5B6A /* TestTDEventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564F61DB68DD200FB5B6A /* TestTDEventsModel.swift */; };
+		65E564F91DB693BE00FB5B6A /* events.json in Resources */ = {isa = PBXBuildFile; fileRef = 65E564F81DB693BE00FB5B6A /* events.json */; };
+		65E564FB1DB693F500FB5B6A /* TestTDRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564FA1DB693F500FB5B6A /* TestTDRest.swift */; };
+		65E564FD1DB6981800FB5B6A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E564FC1DB6981800FB5B6A /* TableViewController.swift */; };
+		65E565011DB69FD500FB5B6A /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E565001DB69FD500FB5B6A /* EventCell.swift */; };
+		65E565031DB6A00D00FB5B6A /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65E565021DB6A00D00FB5B6A /* EventCell.xib */; };
+		65E565051DB6AAD700FB5B6A /* TDLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E565041DB6AAD700FB5B6A /* TDLocation.swift */; };
+		65E565071DB6AAF000FB5B6A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E565061DB6AAF000FB5B6A /* CoreLocation.framework */; };
+		65E565091DB710E900FB5B6A /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E565081DB710E900FB5B6A /* TestTableViewController.swift */; };
+		682A8000FA5FF10612114638 /* Pods_MeetTenDigi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D29F3583F505CC83ABBB1AD /* Pods_MeetTenDigi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17CF324DF48097D52A18A7BD /* Pods-MeetTenDigi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetTenDigi.release.xcconfig"; path = "Pods/Target Support Files/Pods-MeetTenDigi/Pods-MeetTenDigi.release.xcconfig"; sourceTree = "<group>"; };
 		6543743B1DB67B2300FDC047 /* MeetTenDigi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetTenDigi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6543743E1DB67B2300FDC047 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		654374401DB67B2300FDC047 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		654374431DB67B2300FDC047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		654374451DB67B2300FDC047 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		654374481DB67B2300FDC047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +48,20 @@
 		6543744F1DB67B2400FDC047 /* MeetTenDigiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeetTenDigiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654374531DB67B2400FDC047 /* MeetTenDigiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetTenDigiTests.swift; sourceTree = "<group>"; };
 		654374551DB67B2400FDC047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		654374621DB686F300FDC047 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		65E564F21DB6887200FB5B6A /* TDRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDRest.swift; sourceTree = "<group>"; };
+		65E564F41DB6895600FB5B6A /* TDEventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDEventsModel.swift; sourceTree = "<group>"; };
+		65E564F61DB68DD200FB5B6A /* TestTDEventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTDEventsModel.swift; sourceTree = "<group>"; };
+		65E564F81DB693BE00FB5B6A /* events.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = events.json; path = test_data/events.json; sourceTree = "<group>"; };
+		65E564FA1DB693F500FB5B6A /* TestTDRest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTDRest.swift; sourceTree = "<group>"; };
+		65E564FC1DB6981800FB5B6A /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		65E565001DB69FD500FB5B6A /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		65E565021DB6A00D00FB5B6A /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
+		65E565041DB6AAD700FB5B6A /* TDLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TDLocation.swift; sourceTree = "<group>"; };
+		65E565061DB6AAF000FB5B6A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		65E565081DB710E900FB5B6A /* TestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
+		6D29F3583F505CC83ABBB1AD /* Pods_MeetTenDigi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeetTenDigi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC465C19A3C8E2A98FBF9114 /* Pods-MeetTenDigi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MeetTenDigi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MeetTenDigi/Pods-MeetTenDigi.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E565071DB6AAF000FB5B6A /* CoreLocation.framework in Frameworks */,
+				682A8000FA5FF10612114638 /* Pods_MeetTenDigi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +84,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D1359807D3158A81D90C1B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E565061DB6AAF000FB5B6A /* CoreLocation.framework */,
+				6D29F3583F505CC83ABBB1AD /* Pods_MeetTenDigi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		654374321DB67B2300FDC047 = {
 			isa = PBXGroup;
 			children = (
+				654374621DB686F300FDC047 /* Podfile */,
 				6543743D1DB67B2300FDC047 /* MeetTenDigi */,
 				654374521DB67B2400FDC047 /* MeetTenDigiTests */,
 				6543743C1DB67B2300FDC047 /* Products */,
+				8ECF0256B990FCAA31AB6A51 /* Pods */,
+				3D1359807D3158A81D90C1B2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +117,17 @@
 		6543743D1DB67B2300FDC047 /* MeetTenDigi */ = {
 			isa = PBXGroup;
 			children = (
+				65E564F11DB6885700FB5B6A /* lib */,
 				6543743E1DB67B2300FDC047 /* AppDelegate.swift */,
-				654374401DB67B2300FDC047 /* ViewController.swift */,
+				65E564FC1DB6981800FB5B6A /* TableViewController.swift */,
 				654374421DB67B2300FDC047 /* Main.storyboard */,
 				654374451DB67B2300FDC047 /* Assets.xcassets */,
 				654374471DB67B2300FDC047 /* LaunchScreen.storyboard */,
 				6543744A1DB67B2300FDC047 /* Info.plist */,
+				65E564F41DB6895600FB5B6A /* TDEventsModel.swift */,
+				65E564F81DB693BE00FB5B6A /* events.json */,
+				65E565001DB69FD500FB5B6A /* EventCell.swift */,
+				65E565021DB6A00D00FB5B6A /* EventCell.xib */,
 			);
 			path = MeetTenDigi;
 			sourceTree = "<group>";
@@ -92,8 +137,29 @@
 			children = (
 				654374531DB67B2400FDC047 /* MeetTenDigiTests.swift */,
 				654374551DB67B2400FDC047 /* Info.plist */,
+				65E564F61DB68DD200FB5B6A /* TestTDEventsModel.swift */,
+				65E564FA1DB693F500FB5B6A /* TestTDRest.swift */,
+				65E565081DB710E900FB5B6A /* TestTableViewController.swift */,
 			);
 			path = MeetTenDigiTests;
+			sourceTree = "<group>";
+		};
+		65E564F11DB6885700FB5B6A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				65E564F21DB6887200FB5B6A /* TDRest.swift */,
+				65E565041DB6AAD700FB5B6A /* TDLocation.swift */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		8ECF0256B990FCAA31AB6A51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC465C19A3C8E2A98FBF9114 /* Pods-MeetTenDigi.debug.xcconfig */,
+				17CF324DF48097D52A18A7BD /* Pods-MeetTenDigi.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +169,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 654374581DB67B2400FDC047 /* Build configuration list for PBXNativeTarget "MeetTenDigi" */;
 			buildPhases = (
+				1AB341706FC334FCDCBDB4FA /* [CP] Check Pods Manifest.lock */,
 				654374371DB67B2300FDC047 /* Sources */,
 				654374381DB67B2300FDC047 /* Frameworks */,
 				654374391DB67B2300FDC047 /* Resources */,
+				2371BF0577132EE850E4FCB5 /* [CP] Embed Pods Frameworks */,
+				0EC3A09C1C22957B3FE1C269 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -146,10 +215,12 @@
 				TargetAttributes = {
 					6543743A1DB67B2300FDC047 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9WLW3CU782;
 						ProvisioningStyle = Automatic;
 					};
 					6543744E1DB67B2400FDC047 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 9WLW3CU782;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 6543743A1DB67B2300FDC047;
 					};
@@ -181,6 +252,9 @@
 			files = (
 				654374491DB67B2300FDC047 /* LaunchScreen.storyboard in Resources */,
 				654374461DB67B2300FDC047 /* Assets.xcassets in Resources */,
+				65E564F91DB693BE00FB5B6A /* events.json in Resources */,
+				654374631DB686F300FDC047 /* Podfile in Resources */,
+				65E565031DB6A00D00FB5B6A /* EventCell.xib in Resources */,
 				654374441DB67B2300FDC047 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,13 +268,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EC3A09C1C22957B3FE1C269 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetTenDigi/Pods-MeetTenDigi-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AB341706FC334FCDCBDB4FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2371BF0577132EE850E4FCB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MeetTenDigi/Pods-MeetTenDigi-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		654374371DB67B2300FDC047 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				654374411DB67B2300FDC047 /* ViewController.swift in Sources */,
+				65E565051DB6AAD700FB5B6A /* TDLocation.swift in Sources */,
+				65E564F51DB6895600FB5B6A /* TDEventsModel.swift in Sources */,
 				6543743F1DB67B2300FDC047 /* AppDelegate.swift in Sources */,
+				65E564FD1DB6981800FB5B6A /* TableViewController.swift in Sources */,
+				65E565011DB69FD500FB5B6A /* EventCell.swift in Sources */,
+				65E564F31DB6887200FB5B6A /* TDRest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +334,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E564F71DB68DD200FB5B6A /* TestTDEventsModel.swift in Sources */,
 				654374541DB67B2400FDC047 /* MeetTenDigiTests.swift in Sources */,
+				65E564FB1DB693F500FB5B6A /* TestTDRest.swift in Sources */,
+				65E565091DB710E900FB5B6A /* TestTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +389,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -309,6 +439,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -335,9 +466,13 @@
 		};
 		654374591DB67B2400FDC047 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC465C19A3C8E2A98FBF9114 /* Pods-MeetTenDigi.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9WLW3CU782;
 				INFOPLIST_FILE = MeetTenDigi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytedissident.meettendigi.MeetTenDigi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -347,9 +482,13 @@
 		};
 		6543745A1DB67B2400FDC047 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17CF324DF48097D52A18A7BD /* Pods-MeetTenDigi.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9WLW3CU782;
 				INFOPLIST_FILE = MeetTenDigi/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytedissident.meettendigi.MeetTenDigi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -362,6 +501,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9WLW3CU782;
 				INFOPLIST_FILE = MeetTenDigiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytedissident.meettendigi.MeetTenDigiTests;
@@ -376,6 +516,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 9WLW3CU782;
 				INFOPLIST_FILE = MeetTenDigiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bytedissident.meettendigi.MeetTenDigiTests;
@@ -404,6 +545,7 @@
 				6543745A1DB67B2400FDC047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6543745B1DB67B2400FDC047 /* Build configuration list for PBXNativeTarget "MeetTenDigiTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +554,7 @@
 				6543745D1DB67B2400FDC047 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

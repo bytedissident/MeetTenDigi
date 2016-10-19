@@ -7,7 +7,8 @@
 //
 
 import UIKit
-
+//704a57575b10517ac744f3557724418
+//https://api.meetup.com/2/events?key=704a57575b10517ac744f3557724418&group_urlname=ny-tech&sign=true
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
