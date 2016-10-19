@@ -28,6 +28,7 @@ class TDEventsModel: NSObject {
         super.init()
         let options = NSKeyValueObservingOptions([.new, .old])
         tdLoc.addObserver(self, forKeyPath: "locationUpdated", options:options, context: nil)
+        tdLoc.addObserver(self, forKeyPath: "locationUpdateFailed", options:options, context: nil)
     }
     
     func listEvents(){
@@ -110,6 +111,7 @@ class TDEventsModel: NSObject {
             //process event feed with updated lat / long
             self.processEvents()
         }else if keyPath == "locationUpdateFailed" {
+            self.isLoading = false // just to be safe
             self.eventChange = NSDate.timeIntervalSinceReferenceDate
         }
     }
