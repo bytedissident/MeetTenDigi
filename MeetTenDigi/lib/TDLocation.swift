@@ -24,6 +24,7 @@ class TDLocation: NSObject,CLLocationManagerDelegate {
             
             self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
             self.locationManager.requestLocation()
+            self.locationManager.requestWhenInUseAuthorization()
             self.locationManager.startUpdatingLocation()
         }else{
             auth()
